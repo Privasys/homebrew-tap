@@ -5,21 +5,21 @@
 class Privasys < Formula
   desc "Deploy and verify confidential apps from your terminal or your agent"
   homepage "https://privasys.org"
-  version "0.58.7"
+  version "0.58.8"
   license "AGPL-3.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Privasys/cli/releases/download/v0.58.7/privasys_0.58.7_darwin_amd64.tar.gz"
-      sha256 "70e172fc0c753b3326813704f478baa18c84ef11e4ce1496262c1aaa5b6fdbd9"
+      url "https://github.com/Privasys/cli/releases/download/v0.58.8/privasys_0.58.8_darwin_amd64.tar.gz"
+      sha256 "fa4158e19cedc1e7c3de2bb43a063556c2264bd03e92da859289646ebaf50466"
 
       define_method(:install) do
         bin.install "privasys"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Privasys/cli/releases/download/v0.58.7/privasys_0.58.7_darwin_arm64.tar.gz"
-      sha256 "0fb0f6cefe4af1d68e51ad88a4adae77b5b0cf46092c04e056f7b15bbd30d587"
+      url "https://github.com/Privasys/cli/releases/download/v0.58.8/privasys_0.58.8_darwin_arm64.tar.gz"
+      sha256 "339beffc6d43d1f759011e2a71d2a48b827cc6662282b04e82acc5b9b786363a"
 
       define_method(:install) do
         bin.install "privasys"
@@ -29,15 +29,15 @@ class Privasys < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Privasys/cli/releases/download/v0.58.7/privasys_0.58.7_linux_amd64.tar.gz"
-      sha256 "fab7f4a9eb1159ea878dffc5fa05926dda3f0e17603cea02ab49908577c32df9"
+      url "https://github.com/Privasys/cli/releases/download/v0.58.8/privasys_0.58.8_linux_amd64.tar.gz"
+      sha256 "745655dcd83c2bd40d94cec441c51c4cdbe9c1818a064270b79ff0520ceb09f6"
       define_method(:install) do
         bin.install "privasys"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Privasys/cli/releases/download/v0.58.7/privasys_0.58.7_linux_arm64.tar.gz"
-      sha256 "099651d7356369e14392fdc0154af79da9616d135da31180e57add5866131cf6"
+      url "https://github.com/Privasys/cli/releases/download/v0.58.8/privasys_0.58.8_linux_arm64.tar.gz"
+      sha256 "0c07efd228663d361833f24a493c663da54078299341669f0f18eab4aef1557b"
       define_method(:install) do
         bin.install "privasys"
       end
